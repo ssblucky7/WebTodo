@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebTodo — Your tasks, beautifully simple</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>WebTodo</h1>
+      <p class="tagline">Your tasks, beautifully simple.</p>
+    </header>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <input
+        id="task-input"
+        type="text"
+        placeholder="What needs to get done?"
+        aria-label="New task"
+        maxlength="200"
+      />
+      <button type="submit" class="btn-add">Add</button>
+    </form>
+
+    <div class="filters" role="tablist" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all" role="tab">All</button>
+      <button class="filter" data-filter="active" role="tab">Active</button>
+      <button class="filter" data-filter="completed" role="tab">Completed</button>
+    </div>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <footer class="app-footer">
+      <span id="task-count">0 tasks</span>
+      <button id="clear-completed" class="btn-clear">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
